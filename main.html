@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>GIS Mapping</title>
+    <style>
+        html, body, #viewDiv {
+            padding: 0;
+            margin: 0;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <link rel="stylesheets" href="https://js.arcgis.com/4.23/esri/themes/light/main.css"/>
+    <script src="https://js.arcgis.com/4.23/"></script>
+    <script>
+        require([
+        // Add modules
+        "esri/config",
+        "esri/Map", 
+        "esri/views/MapView",
+
+        "esri/Graphic",
+        "esri/layers/GraphicsLayer"
+
+        ], function (esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+            // Reference API
+            esriConfig.apiKey = "AAPK9df47fcf4e85446098fde742ffbb5974fKBIZy0vdfaapZhG7HTOsIYS6KpegVP_5EbxQpMqx3ZIF0u3EsZe7Hx63rPAhBQR"
+            // Create a map
+            const map = new Map({
+                basemap: "arcgis-topographic" // Basemap Layer service - it provides visual and geographic context for a map or scene.
+            });
+            // Create map view
+            const view = new MapView({ // Create a map view
+                map: map,
+                center: [-111.792824, 43.825386], // Longitude, latitude
+                zoom: 13, // Zoom level
+                container: "viewDiv" // Div element
+            });
+
+
+            // Add a graphics layer - a client-side, temporary container of graphics to display on a map view
+            const graphicsLayer = new GraphicsLayer();
+            map.add(graphicsLayer);
+
+
+            // Add a point graphic - defined with longitude (X) and latitude (y) coordinates
+            const point = { // Create a point
+                type: "point",
+                longitude: -111.7825, // Taylor building
+                latitude: 43.8170
+            };
+            const point1 = { // Create a point
+                type: "point",
+                longitude: -111.7833, // Benson building
+                latitude: 43.8156
+            };
+            const point2 = { // Create a point
+                type: "point",
+                longitude: -111.7832, // Romney building
+                latitude: 43.8202
+            };
+            const point3 = { // Create a point
+                type: "point",
+                longitude: -111.7846, // STC building
+                latitude: 43.8146
+            };
+
+
+            const simpleMarkerSymbol = {
+                type: "simple-marker",
+                color: [226, 119, 40],  // Orange
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol1 = {
+                type: "simple-marker",
+                color: [226, 119, 40],  // Orange
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol2 = {
+                type: "simple-marker",
+                color: [226, 119, 40],  // Orange
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol3 = {
+                type: "simple-marker",
+                color: [226, 119, 40],  // Orange
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+
+
+            const pointGraphic = new Graphic({
+                geometry: point,
+                symbol: simpleMarkerSymbol
+            });
+            const pointGraphic1 = new Graphic({
+                geometry: point1,
+                symbol: simpleMarkerSymbol1
+            });
+            const pointGraphic2 = new Graphic({
+                geometry: point2,
+                symbol: simpleMarkerSymbol2
+            });
+            const pointGraphic3 = new Graphic({
+                geometry: point3,
+                symbol: simpleMarkerSymbol3
+            });
+
+
+            graphicsLayer.add(pointGraphic);
+            graphicsLayer.add(pointGraphic1);
+            graphicsLayer.add(pointGraphic2);
+            graphicsLayer.add(pointGraphic3);
+
+
+            // Create a line geometry/graphic - defined as a sequence of points
+            const polyline = {
+                type: "polyline",
+                paths: [
+                    [-111.7825, 43.8170], //Longitude, latitude of Taylor building
+                    [-111.7833, 43.8156], //Longitude, latitude of Benson building
+                    [-111.7832, 43.8202], //Longitude, latitude of Romney building
+                    [-111.7825, 43.8170]
+                ]
+            };
+            const simpleLineSymbol = {
+                type: "simple-line",
+                color: [226, 119, 40], // Orange
+                width: 2
+            };
+            const polylineGraphic = new Graphic({
+                geometry: polyline,
+                symbol: simpleLineSymbol
+            });
+            graphicsLayer.add(polylineGraphic);
+        });
+    </script>
+</head>
+
+<body>
+    <div id="viewDiv"></div>
+</body>
+
+</html>

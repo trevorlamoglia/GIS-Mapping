@@ -19,8 +19,8 @@
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [ArcGIS Developer](https://developers.arcgis.com/)
+* [LatLong.net](https://www.latlong.net/)
 
 # Future Work
 
