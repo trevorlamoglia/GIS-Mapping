@@ -47,10 +47,11 @@
 
 
             // Add a point graphic - defined with longitude (X) and latitude (y) coordinates
+            // Points on BYUI buildings
             const point = { // Create a point
                 type: "point",
-                longitude: -111.7825, // Taylor building
-                latitude: 43.8170
+                longitude: -111.7850, // BYU-I Center
+                latitude: 43.8184
             };
             const point1 = { // Create a point
                 type: "point",
@@ -59,7 +60,7 @@
             };
             const point2 = { // Create a point
                 type: "point",
-                longitude: -111.7832, // Romney building
+                longitude: -111.7817, // Clarke building
                 latitude: 43.8202
             };
             const point3 = { // Create a point
@@ -67,8 +68,42 @@
                 longitude: -111.7846, // STC building
                 latitude: 43.8146
             };
+            const point4 = { // Create a point
+                type: "point",
+                longitude: -111.7799, // Hinckley building
+                latitude: 43.8159
+            };
 
 
+            // Points on housing apartments
+            const point5 = { // Create a point
+                type: "point",
+                longitude: -111.7880, // Delta Phi Apartments
+                latitude: 43.8174
+            };
+            const point6 = {
+                type: "point",
+                longitude: -111.7871, // Heritage Apartments
+                latitude: 43.8174
+            };
+            const point7 = {
+                type: "point",
+                longitude: -111.7878, // Birch Apartments
+                latitude: 43.8210
+            };
+            const point8 = {
+                type: "point",
+                longitude: -111.7917, // Sundance Apartments
+                latitude: 43.8202
+            };
+            const point9 = {
+                type: "point",
+                longitude: -111.7941, // The Landing Aparments
+                latitude: 43.8174
+            };
+
+
+            // Markers for BYUI buildings
             const simpleMarkerSymbol = {
                 type: "simple-marker",
                 color: [226, 119, 40],  // Orange
@@ -101,8 +136,60 @@
                     width: 1
                 }
             };
+            const simpleMarkerSymbol4 = {
+                type: "simple-marker",
+                color: [226, 119, 40],  // Orange
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
 
 
+            // Markers for housing apartments
+            const simpleMarkerSymbol5 = {
+                type: "simple-marker",
+                color: [0, 96, 255],  // Blue
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol6 = {
+                type: "simple-marker",
+                color: [0, 96, 255],  // Blue
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol7 = {
+                type: "simple-marker",
+                color: [0, 96, 255],  // Blue
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol8 = {
+                type: "simple-marker",
+                color: [0, 96, 255],  // Blue
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol9 = {
+                type: "simple-marker",
+                color: [0, 96, 255],  // Blue
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+
+
+            // Point graphics for BYUI buildings
             const pointGraphic = new Graphic({
                 geometry: point,
                 symbol: simpleMarkerSymbol
@@ -119,22 +206,57 @@
                 geometry: point3,
                 symbol: simpleMarkerSymbol3
             });
-
+            const pointGraphic4 = new Graphic({
+                geometry: point4,
+                symbol: simpleMarkerSymbol4
+            });
 
             graphicsLayer.add(pointGraphic);
             graphicsLayer.add(pointGraphic1);
             graphicsLayer.add(pointGraphic2);
             graphicsLayer.add(pointGraphic3);
+            graphicsLayer.add(pointGraphic4);
+
+
+            // Point graphics for housing apartments
+            const pointGraphic5 = new Graphic({
+                geometry: point5,
+                symbol: simpleMarkerSymbol5
+            });
+            const pointGraphic6 = new Graphic({
+                geometry: point6,
+                symbol: simpleMarkerSymbol6
+            });
+            const pointGraphic7 = new Graphic({
+                geometry: point7,
+                symbol: simpleMarkerSymbol7
+            });
+            const pointGraphic8 = new Graphic({
+                geometry: point8,
+                symbol: simpleMarkerSymbol8
+            });
+            const pointGraphic9 = new Graphic({
+                geometry: point9,
+                symbol: simpleMarkerSymbol9
+            });
+
+
+            graphicsLayer.add(pointGraphic5);
+            graphicsLayer.add(pointGraphic6);
+            graphicsLayer.add(pointGraphic7);
+            graphicsLayer.add(pointGraphic8);
+            graphicsLayer.add(pointGraphic9);
 
 
             // Create a line geometry/graphic - defined as a sequence of points
             const polyline = {
                 type: "polyline",
                 paths: [
-                    [-111.7825, 43.8170], //Longitude, latitude of Taylor building
-                    [-111.7833, 43.8156], //Longitude, latitude of Benson building
-                    [-111.7832, 43.8202], //Longitude, latitude of Romney building
-                    [-111.7825, 43.8170]
+                    [-111.7850, 43.8184], // Longitude, latitude of BYU-I Center
+                    [-111.7833, 43.8156], // Longitude, latitude of Benson building
+                    [-111.7817, 43.8202], // Longitude, latitude of Clarke building
+                    [-111.7846, 43.8146], // Longitude, latitude of STC
+                    [-111.7799, 43.8159]  // Longitude, latitude of Hinckley building
                 ]
             };
             const simpleLineSymbol = {
