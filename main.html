@@ -23,7 +23,8 @@
         "esri/views/MapView",
 
         "esri/Graphic",
-        "esri/layers/GraphicsLayer"
+        "esri/layers/GraphicsLayer",
+        "esri/layers/FeatureLayer"
 
         ], function (esriConfig,Map, MapView, Graphic, GraphicsLayer) {
             // Reference API
@@ -101,6 +102,62 @@
                 longitude: -111.7941, // The Landing Aparments
                 latitude: 43.8174
             };
+
+
+            // Points on food places
+            const point10 = {
+                type: "point",
+                longitude: -111.7888, // Subway
+                latitude: 43.8179
+            }
+            const point11 = {
+                type: "point",
+                longitude: -111.7786, // McDonald's
+                latitude: 43.8337
+            }
+            const point12 = {
+                type: "point",
+                longitude: -111.7771, // Panda Express
+                latitude: 43.8568
+            }
+            const point13 = {
+                type: "point",
+                longitude: -111.8098, // Fresco Kitchen and Grill
+                latitude: 43.8013
+            }
+            const point14 = {
+                type: "point",
+                longitude: -111.7842, // K'Lani's
+                latitude: 43.8244
+            }
+
+
+            // Points on local stores
+            const point15 = {
+                type: "point",
+                longitude: -111.7874, // Broulim's Supermarket
+                latitude: 43.8273
+            }
+            const point16 = {
+                type: "point",
+                longitude: -111.7794, // Dollar Tree
+                latitude: 43.8347
+            }
+            const point17 = {
+                type: "point",
+                longitude: -111.7755, // Albertsons
+                latitude: 43.8363
+            }
+            const point18 = {
+                type: "point",
+                longitude: -111.7753, // C-A-L Ranch Stores
+                latitude: 43.8373
+            }
+            const point19 = {
+                type: "point",
+                longitude: -111.7738, // Walmart Supercenter
+                latitude: 43.8561
+            }
 
 
             // Markers for BYUI buildings
@@ -189,6 +246,92 @@
             };
 
 
+            // Markers for food places
+            const simpleMarkerSymbol10 = {
+                type: "simple-marker",
+                color: [202, 0, 42], // Red
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol11 = {
+                type: "simple-marker",
+                color: [202, 0, 42], // Red
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol12 = {
+                type: "simple-marker",
+                color: [202, 0, 42], // Red
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol13 = {
+                type: "simple-marker",
+                color: [202, 0, 42], // Red
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol14 = {
+                type: "simple-marker",
+                color: [202, 0, 42], // Red
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+
+
+            // Markers for local stores
+            const simpleMarkerSymbol15 = {
+                type: "simple-marker",
+                color: [52, 124, 44], // Green
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol16 = {
+                type: "simple-marker",
+                color: [52, 124, 44], // Green
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol17 = {
+                type: "simple-marker",
+                color: [52, 124, 44], // Green
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol18 = {
+                type: "simple-marker",
+                color: [52, 124, 44], // Green
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+            const simpleMarkerSymbol19 = {
+                type: "simple-marker",
+                color: [52, 124, 44], // Green
+                outline: {
+                    color: [255, 255, 255], // White
+                    width: 1
+                }
+            };
+
+
             // Point graphics for BYUI buildings
             const pointGraphic = new Graphic({
                 geometry: point,
@@ -248,6 +391,66 @@
             graphicsLayer.add(pointGraphic9);
 
 
+            // Point graphics for food places
+            const pointGraphic10 = new Graphic({
+                geometry: point10,
+                symbol: simpleMarkerSymbol10
+            });
+            const pointGraphic11 = new Graphic({
+                geometry: point11,
+                symbol: simpleMarkerSymbol11
+            });
+            const pointGraphic12 = new Graphic({
+                geometry: point12,
+                symbol: simpleMarkerSymbol12
+            });
+            const pointGraphic13 = new Graphic({
+                geometry: point13,
+                symbol: simpleMarkerSymbol13
+            });
+            const pointGraphic14 = new Graphic({
+                geometry: point14,
+                symbol: simpleMarkerSymbol14
+            });
+
+
+            graphicsLayer.add(pointGraphic10);
+            graphicsLayer.add(pointGraphic11);
+            graphicsLayer.add(pointGraphic12);
+            graphicsLayer.add(pointGraphic13);
+            graphicsLayer.add(pointGraphic14);
+
+
+            // Point graphics for local stores
+            const pointGraphic15 = new Graphic({
+                geometry: point15,
+                symbol: simpleMarkerSymbol15
+            });
+            const pointGraphic16 = new Graphic({
+                geometry: point16,
+                symbol: simpleMarkerSymbol16
+            });
+            const pointGraphic17 = new Graphic({
+                geometry: point17,
+                symbol: simpleMarkerSymbol17
+            });
+            const pointGraphic18 = new Graphic({
+                geometry: point18,
+                symbol: simpleMarkerSymbol18
+            });
+            const pointGraphic19 = new Graphic({
+                geometry: point19,
+                symbol: simpleMarkerSymbol19
+            });
+
+
+            graphicsLayer.add(pointGraphic15);
+            graphicsLayer.add(pointGraphic16);
+            graphicsLayer.add(pointGraphic17);
+            graphicsLayer.add(pointGraphic18);
+            graphicsLayer.add(pointGraphic19);
+
+
             // Create a line geometry/graphic - defined as a sequence of points
             const polyline = {
                 type: "polyline",
@@ -269,6 +472,11 @@
                 symbol: simpleLineSymbol
             });
             graphicsLayer.add(polylineGraphic);
+
+
+            // Pop-up section
+
+
         });
     </script>
 </head>
