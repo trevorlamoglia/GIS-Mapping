@@ -26,7 +26,6 @@ Python is a programming language with objects, modules, threads, and automatic m
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
 * Create a popup for each marker
 
 # Visit Website
