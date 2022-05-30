@@ -1,20 +1,22 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is my GIS Mapping learning project. My intent was to learn and hone my skills in programming as a software engineer and to further improve my skills in my career. To do that, I decided to learn about the basics of GIS Mapping and add that into my set of skills.
 
-{Provide a description the map software that you wrote. Describe how to use your software.  Describe the source of the data that you used.}
+<!-- {Provide a description the map software that you wrote. Describe how to use your software.  Describe the source of the data that you used.} -->
 
 {Describe your purpose for writing this software.}
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+<!-- [Software Demo Video](http://youtube.link.goes.here) -->
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+- Python 3.9 64-bit
+- Visual Studio Code
+- Git / GitHub
 
-{Describe the programming language that you used and any libraries.}
+Visual Studio Code, also commonly referred to as VS Code, is a source-code editor made by Microsoft for Windows, Linux and macOS. Features include support for debugging, syntax highlighting, intelligent code completion, snippets, code refactoring, and embedded Git.
+
+Python is a programming language with objects, modules, threads, and automatic memory management. Python is a very simple language, and has very straightforward syntax that programmers fall in love with including me.
 
 # Useful Websites
 
@@ -25,10 +27,8 @@
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Create a popup for each marker
 
 # Visit Website
 
-* [GIS-Mapping of Rexburg](main.html)
+* [GIS-Mapping of Rexburg](https://trevorlamoglia.github.io/GIS-Mapping/)
