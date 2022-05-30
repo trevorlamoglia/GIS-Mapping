@@ -4,7 +4,7 @@ This is my GIS Mapping learning project. My intent was to learn and hone my skil
 
 <!-- {Provide a description the map software that you wrote. Describe how to use your software.  Describe the source of the data that you used.} -->
 
-{Describe your purpose for writing this software.}
+The purpose in writing the program is to create 20 markers in Rexburg, Idaho. 5 markers for BYUI buildings, 5 for student housing, 5 for local stores, and 5 for food places.
 
 <!-- [Software Demo Video](http://youtube.link.goes.here) -->
 
